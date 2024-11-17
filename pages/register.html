@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/register.css" />
+    <style>
+      /* General message container */
+      .messages {
+        margin-bottom: 20px; /* Space between the messages and the rest of the content */
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px; /* Adjust font size */
+      }
+
+      /* Success message */
+      .message.success {
+        background-color: #4caf50; /* Green background */
+        color: white; /* White text */
+        padding: 15px; /* Padding around the text */
+        border: 1px solid #45a049; /* Darker green border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        margin-bottom: 10px; /* Spacing between messages */
+      }
+
+      /* Error message */
+      .message.error {
+        background-color: #f44336; /* Red background */
+        color: white; /* White text */
+        padding: 15px; /* Padding around the text */
+        border: 1px solid #e53935; /* Darker red border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        margin-bottom: 10px; /* Spacing between messages */
+      }
+
+      /* Info message */
+      .message.info {
+        background-color: #2196f3; /* Blue background */
+        color: white; /* White text */
+        padding: 15px; /* Padding around the text */
+        border: 1px solid #1976d2; /* Darker blue border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        margin-bottom: 10px; /* Spacing between messages */
+      }
+
+      /* Warning message */
+      .message.warning {
+        background-color: #ff9800; /* Orange background */
+        color: white; /* White text */
+        padding: 15px; /* Padding around the text */
+        border: 1px solid #fb8c00; /* Darker orange border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        margin-bottom: 10px; /* Spacing between messages */
+      }
+
+      /* Styling for the message text */
+      .message {
+        font-weight: bold;
+        text-align: center; /* Center align the message text */
+        border-radius: 5px; /* Round the corners */
+        font-family: Arial, sans-serif; /* Font style */
+      }
+
+      /* Optional: Add a close button (for dismissing messages) */
+      .message .close {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+      }
+
+      .message .close:hover {
+        color: #ccc; /* Lighter color on hover */
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../images/title-logo.png"
+      style="border-radius: 999px"
+    />
+    <title>UniBuddy - Register</title>
+  </head>
+  <body class="flex flex-col items-center">
+    <img
+      src="../images/background.avif"
+      alt=""
+      class="-z-2 background opacity-20 w-screen object-cover"
+    />
+    <!-- Photo by <a href="https://unsplash.com/@androwv?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrei R. Popescu</a> on <a href="https://unsplash.com/photos/a-lake-surrounded-by-mountains-covered-in-snow-evDCeV-adM4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+       -->
+
+    <!-- <div class="flex items-center p-4 mb-4 text-sm text-blue-800 border border-blue-300 rounded-lg bg-blue-50 dark:bg-gray-900 dark:text-blue-400 w-2/3 mt-4">
+        <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="sr-only">Info</span>
+        <div>
+            {% if messages %}
+            <div class="messages">
+              {% for message in messages %}
+              <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+                {{ message }}
+              </div>
+              {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+      </div> -->
+    <nav class="sticky z-50 w-full py-6">
+      <a href="../index.html" class="flex justify-center items-center"
+        ><img
+          src="../images/whitelogo - horizontal.png"
+          alt=""
+          srcset=""
+          id="logo"
+          class="w-3/4 md:w-2/4 lg:w-1/3"
+      /></a>
+    </nav>
+    <section class="flex flex-col items-center gap-5">
+      <!-- {% if messages %}
+    <div class="messages">
+      {% for message in messages %}
+      <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+        {{ message }}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %} -->
+    <div class="flex flex-col items-center ">
+        <h1 class="wel font-bold text-5xl xl:text-6xl my-2">Let's Get Started!</h1>
+        <p class="wel-subtext my-2 tracking-wide text-sm xl:tracking-wider">
+          Please register to UniBuddy with your KIET email address.
+        </p>
+      </div>
+      <form method="post" action="" class="flex flex-col items-center gap-2">
+        <!-- {% csrf_token %} -->
+    
+        <div class="form-holder">
+          <span class="lnr lnr-user"></span>
+          <input
+            type="text"
+            class="form-control open-sans  py-2 px-4 border-2 border-gray-300 rounded bg-transparent w-96"
+            placeholder="Username"
+            name="username"
+          />
+        </div>
+        <div class="form-holder">
+          <span class="lnr lnr-phone-handset"></span>
+          <input
+            type="text"
+            class="form-control open-sans  py-2 px-4 border-2 border-gray-300 rounded bg-transparent w-96"
+            placeholder="Name"
+            name="name"
+          />
+        </div>
+        <div class="form-holder">
+          <span class="lnr lnr-phone-handset"></span>
+          <input
+            type="text"
+            class="form-control open-sans  py-2 px-4 border-2 border-gray-300 rounded bg-transparent w-96"
+            placeholder="Year"
+            name="year"
+          />
+        </div>
+        <div class="form-holder">
+          <span class="lnr lnr-envelope"></span>
+          <input
+            type="text"
+            class="form-control open-sans py-2 px-4 border-2 border-gray-300 rounded bg-transparent w-96"
+            placeholder="Mail"
+            name="email"
+          />
+        </div>
+        <div class="form-holder">
+          <span class="lnr lnr-lock"></span>
+          <select name="domain1" id="domain1" class=" open-sans  py-2 px-4 border-2 border-gray-300 rounded bg-transparent w-96">
+            <option value="none">Select your domain</option>
+            <option value="aiml">AI/ML</option>
+            <option value="web">Web-Development</option>
+            <option value="cp">CP/DSA</option>
+            <option value="andriod">App-Development</option>
+            <option value="arvr">AR/VR</option>
+            <option value="uiux">UI/UX</option>
+            <option value="graphics">Graphic Designing</option>
+            <option value="videoediting">Video Editing</option>
+            <option value="gaming">Gaming</option>
+            <option value="gamedev">Game Development</option>
+            <option value="photo">Photography</option>
+            <option value="music">Music</option>
+            <option value="acting">Acting</option>
+          </select>
+        </div>
+        <div class="form-holder">
+          <span class="lnr lnr-lock"></span>
+          <select name="domain2" id="domain2" class="open-sans  py-2 px-4 border-2 border-gray-300 rounded bg-transparent w-96">
+            <option value="none">Select your domain</option>
+            <option value="aiml">aiml</option>
+            <option value="web">web-d</option>
+            <option value="cp">cp</option>
+            <option value="andriod">andriod</option>
+            <option value="arvr">ar/ver</option>
+            <option value="uiux">ui/ux</option>
+            <option value="graphics">graphics</option>
+            <option value="videoediting">video editing</option>
+            <option value="gaming">gaming</option>
+            <option value="gamedev">game developer</option>
+            <option value="photo">photography</option>
+            <option value="music">music</option>
+            <option value="acting">acting</option>
+          </select>
+        </div>
+        <div class="form-holder">
+          <span class="lnr lnr-lock"></span>
+          <input
+            type="password"
+            class="form-control open-sans py-2 px-4 border-2 border-gray-300 rounded bg-transparent w-96"
+            placeholder="Password"
+            name="password"
+          />
+        </div>
+        <div class="form-holder">
+          <span class="lnr lnr-lock"></span>
+          <input
+            type="password"
+            class="form-control open-sans py-2 px-4 border-2 border-gray-300 rounded bg-transparent w-96"
+            placeholder="Confirm Password"
+            name="cpassword"
+          />
+        </div>
+        <button class="btn uppercase border-2 w-1/3 rounded p-2 mt-4">Register</button>
+     
+      </form>
+      <div class="">
+        Been here before?
+        <a href="/login" class="underline text-thin">Login Here!</a>
+      </div>
+    </section>
+  </body>
+</html>
