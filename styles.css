@@ -1,101 +1,4 @@
-/* 
-body {
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(
-    179.4deg,
-    rgb(12, 20, 69) -16.9%,
-    rgb(71, 30, 84) 119.9%
-  );
-  color: #ffffff;
-  overflow-x: hidden;
-  position: relative;
-}
 
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../images/background.avif") center/cover no-repeat;
-  opacity: 0.1;
-  z-index: -1;
-}
-
-
-
-
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: rgba(12, 20, 69, 0.9);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(10px);
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #00d4ff;
-  text-shadow: 0 3px 10px rgba(0, 212, 255, 0.5);
-}
-
-.nav a {
-  margin-right: 1.5rem;
-  font-size: 1rem;
-  color: #ffffffcc;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.nav a:hover {
-  color: #00d4ff;
-  transform: scale(1.1);
-}
-
-.btn {
-  background: linear-gradient(135deg, #00d4ff, #007b9c);
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 10px rgba(0, 212, 255, 0.5);
-}
-
-.btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(178, 233, 255, 0.7);
-}
-
-
-
-
-
-
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 3rem 2rem;
-  height: 85vh;
-  background: transparent;
-  color: #ffffff;
-}
-
-.hero-content {
-  max-width: 50%;
-  animation: fadeIn 1s ease;
-}
-*/
 .gradient-text {
   font-size: 3rem;
   font-weight: bold;
@@ -116,12 +19,10 @@ body::before {
 
 .features {
   padding: 3rem 2rem;
-  /* background: rgba(71, 30, 84, 0.9); */
   background-color: white;
   opacity: 0.7;
   backdrop-filter: blur(15px);
   text-align: center;
-  /* border-radius: 15px; */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
